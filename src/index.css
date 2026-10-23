@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-deep: #08281E;
+  --color-emerald-dark: #0D4736;
+  --color-emerald-primary: #125441;
+  --color-emerald-medium: #1C6E56;
+  --color-emerald-light: #2A8C6F;
+  --color-emerald-soft: #D1E6DC;
+  --color-emerald-wash: #EDF5F1;
+  
+  --color-warm-ivory: #FCFAF6;
+  --color-ivory-card: #FFFDF9;
+  
+  --color-antique-gold: #C5A059;
+  --color-gold-bright: #D4AF37;
+  --color-gold-light: #E8D39E;
+  --color-gold-dark: #9A7736;
+  
+  --color-deep-brown: #2C2621;
+  --color-brown-muted: #5C5248;
+  --color-champagne: #F2E8D5;
+
+  --font-cinzel: "Cinzel", Georgia, serif;
+  --font-script: "Alex Brush", "Cinzel", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-arabic: "Amiri", "Scheherazade New", serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-warm-ivory);
+    color: var(--color-deep-brown);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Custom emerald & gold scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFAF6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #125441;
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.75));
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-soft-glow {
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
