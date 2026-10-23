@@ -7,7 +7,6 @@ import { BackgroundMonogram } from "../common/BackgroundMonogram";
 import { CountdownTimer } from "../finale/CountdownTimer";
 import { ActionButtons } from "../finale/ActionButtons";
 import { AudioPlayerCard } from "../common/AudioPlayer";
-import { Footer } from "../finale/Footer";
 
 interface Scene10InvitationCardProps {
   isPlaying: boolean;
@@ -361,9 +360,6 @@ export const Scene10InvitationCard: React.FC<Scene10InvitationCardProps> = ({
           </p>
         </div>
       )}
-
-      {/* Footer Credit */}
-      <Footer />
     </section>
   );
 };

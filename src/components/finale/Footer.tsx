@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
         </p>
 
         <p className="text-[10px] text-[#6B524B]/60 font-['Montserrat']">
-          Sunday, 8 November 2026 • Shubham Auditorium, Elamkulam
+          Sunday, 8 November 2026 • Masjidul Noor (10:30 AM) & Shubham Auditorium (12:00 PM)
         </p>
       </div>
     </footer>
