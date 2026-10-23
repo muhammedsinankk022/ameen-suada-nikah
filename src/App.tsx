@@ -29,12 +29,18 @@ export function App() {
     toggleMusic,
     toggleMute,
     setVolume,
+    startMusic,
   } = useAudioEngine();
 
   const { jumpToScene } = useScrollJourney(reducedMotion);
 
   // When guest clicks "Enter the Wedding Story" in Scene 1
   const handleEnterStory = () => {
+    // Immediately initiate music playback on explicit user action
+    if (!isPlaying) {
+      startMusic();
+    }
+
     // Trigger subtle emerald/golden sparkle burst
     confetti({
       particleCount: 30,
