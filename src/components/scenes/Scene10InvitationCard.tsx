@@ -11,13 +11,11 @@ import { AudioPlayerCard } from "../common/AudioPlayer";
 interface Scene10InvitationCardProps {
   isPlaying: boolean;
   onToggleMusic: () => void;
-  onOpenGuestMemories: () => void;
 }
 
 export const Scene10InvitationCard: React.FC<Scene10InvitationCardProps> = ({
   isPlaying,
   onToggleMusic,
-  onOpenGuestMemories,
 }) => {
   // Precious moments real image upload state
   const [preciousPhoto, setPreciousPhoto] = useState<string | null>(null);
@@ -309,27 +307,6 @@ export const Scene10InvitationCard: React.FC<Scene10InvitationCardProps> = ({
           {/* Audio Player Card */}
           <div className="mt-5 w-full">
             <AudioPlayerCard isPlaying={isPlaying} onToggle={onToggleMusic} />
-          </div>
-
-          {/* Guest Memories Quick Ribbon */}
-          <div className="mt-6 w-full pt-5 border-t border-[#C5A059]/30">
-            <div className="flex items-center justify-between mb-3">
-              <div className="text-left">
-                <span className="font-['Cinzel'] text-xs font-bold text-[#08281E] block">
-                  Guest Memories Gallery
-                </span>
-                <span className="font-['Montserrat'] text-[10px] text-[#5C5248]">
-                  Share your blessed photos of Ameen & Suada
-                </span>
-              </div>
-              <button
-                onClick={onOpenGuestMemories}
-                type="button"
-                className="px-3 py-1.5 rounded-full bg-[#0D4736] hover:bg-[#125441] text-white text-[10px] font-['Cinzel'] font-semibold tracking-wider shadow-xs transition-colors"
-              >
-                View Gallery
-              </button>
-            </div>
           </div>
         </div>
       </div>
